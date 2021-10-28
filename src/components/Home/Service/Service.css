@@ -1,0 +1,24 @@
+.service-card {
+ border: none;
+ box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.158);
+ overflow: hidden;
+}
+
+.service-card img {
+ transition: all 600ms;
+}
+
+.service-card img:hover {
+ transform: scale(1.05);
+}
+.card-small-text {
+ font-size: 0.9rem;
+ color: #45615a;
+ font-family: "Poppins", sans-serif;
+}
+.card-name {
+ color: #ff7f47;
+}
+.rating-icon-card {
+ color: #ff7f47;
+}

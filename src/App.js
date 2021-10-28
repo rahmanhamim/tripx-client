@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Headers from "./components/Shared/Headers/Headers";
 import Home from "./components/Home/Home/Home";
+import Login from "./components/Login/Login";
 
 function App() {
  return (
@@ -11,6 +12,9 @@ function App() {
    <Switch>
     <Route exact path="/">
      <Home></Home>
+    </Route>
+    <Route exact path="/login">
+     <Login></Login>
     </Route>
    </Switch>
   </Router>

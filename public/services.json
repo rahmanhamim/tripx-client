@@ -1,0 +1,50 @@
+[
+ {
+  "id": 1,
+  "name": "Paris Hill Tour",
+  "img": "https://i.ibb.co/x76qZb4/tourPkg1.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "3"
+ },
+ {
+  "id": 2,
+  "name": "Lake Grada, Italy",
+  "img": "https://i.ibb.co/594pnYk/tourPkg2.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "7"
+ },
+ {
+  "id": 3,
+  "name": "Paris Hill Tour",
+  "img": "https://i.ibb.co/x76qZb4/tourPkg1.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "6"
+ },
+ {
+  "id": 4,
+  "name": "Lake Grada, Italy",
+  "img": "https://i.ibb.co/594pnYk/tourPkg2.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "4"
+ },
+ {
+  "id": 5,
+  "name": "Paris Hill Tour",
+  "img": "https://i.ibb.co/x76qZb4/tourPkg1.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "9"
+ },
+ {
+  "id": 6,
+  "name": "Lake Grada, Italy",
+  "img": "https://i.ibb.co/594pnYk/tourPkg2.png",
+  "price": "180",
+  "rating": 3,
+  "tourDays": "8"
+ }
+]

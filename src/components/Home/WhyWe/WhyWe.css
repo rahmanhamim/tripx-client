@@ -1,0 +1,13 @@
+.why-we-section {
+ background: url("../../../images/why-we-bg.png");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ min-height: 50vh;
+ margin-top: 6rem;
+ margin-bottom: 6rem;
+}
+.why-we-card {
+ background-color: #315048;
+ color: white;
+}
