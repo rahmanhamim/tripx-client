@@ -1,0 +1,13 @@
+.tripx-span {
+ color: #ff7f47;
+}
+.headers-link {
+ text-decoration: none;
+ color: #262339;
+ margin: 0 0.5em;
+ font-weight: 400;
+ transition: all 300ms;
+}
+.headers-link:hover {
+ color: #ff7f47;
+}
