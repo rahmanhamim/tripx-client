@@ -8,7 +8,7 @@ const Banner = () => {
     <div className="row">
      <div className="col-12 col-md-4">
       <p className="display-3 text-light ">
-       Amazing Tour <br /> in Bangladesh
+       Amazing Tour <br /> on Earth
       </p>
       <p className="banner-subtitle">Exlpore like never before!</p>
       <button className="btn-regular">Book Now</button>

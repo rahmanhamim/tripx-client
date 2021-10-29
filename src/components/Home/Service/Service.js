@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = ({ service }) => {
- const { name, img, price, rating, tourDays, id } = service;
+ const { name, img, price, rating, tourDays, _id } = service;
  return (
   <Col>
    <Card className="service-card h-100">
@@ -35,7 +35,7 @@ const Service = ({ service }) => {
        <i className="fas fa-star rating-icon-card"></i> {rating}k+ rating
       </div>
       <div>
-       <Link to={`booking/${id}`}>
+       <Link to={`booking/${_id}`}>
         <button className="book-btn">Book Now</button>
        </Link>
       </div>

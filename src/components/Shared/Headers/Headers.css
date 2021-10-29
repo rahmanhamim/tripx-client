@@ -14,7 +14,7 @@
  text-decoration: none;
  color: #262339;
  margin: 0 0.5em;
- padding: 0.2em 0.5em;
+ padding: 0.4em 0.5em;
  font-weight: 400;
  transition: all 300ms;
 }
@@ -22,12 +22,13 @@
  color: #ff7f47;
 }
 .login-link {
+ width: fit-content;
  text-decoration: none;
  color: #262339;
  border: 1px solid #ff7f47;
  border-radius: 5px;
- margin: 0 0.5em;
- padding: 0.2em 0.5em;
+ margin: 0.5em 0.5em;
+ padding: 0.4em 0.5em;
  transition: all 400ms;
 }
 .login-link:hover {
@@ -35,4 +36,18 @@
  border: 1px solid #454545;
 
  color: white;
+}
+
+.cart-btn {
+ text-decoration: none;
+ color: #45615a;
+ border: 1px solid #45615a;
+ border-radius: 5px;
+ margin: 0.5em 0.5em;
+ padding: 0.4em 0.2em;
+ transition: all 400ms;
+}
+.cart-btn:hover {
+ color: white;
+ background-color: #45615a;
 }
