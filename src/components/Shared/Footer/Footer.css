@@ -1,0 +1,11 @@
+footer {
+ background-color: #262339;
+ color: white;
+ margin: 0;
+}
+.icon {
+ color: #ff7f47;
+}
+.footer-text-small {
+ font-size: 0.8rem;
+}

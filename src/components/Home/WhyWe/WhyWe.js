@@ -18,7 +18,7 @@ const WhyWe = () => {
       <Card className="why-we-card p-2">
        <Card.Body className="text-center">
         <div>
-         <i class="far fa-6x fa-user-circle"></i>
+         <i className="far fa-6x fa-user-circle"></i>
         </div>
         <h4 className="my-2">2000+ Our worldwide guide</h4>
        </Card.Body>
@@ -28,7 +28,7 @@ const WhyWe = () => {
       <Card className="why-we-card p-2">
        <Card.Body className="text-center">
         <div>
-         <i class="far fa-6x fa-handshake"></i>
+         <i className="far fa-6x fa-handshake"></i>
         </div>
         <h4 className="my-2">100% trusted travel agency</h4>
        </Card.Body>
@@ -38,7 +38,7 @@ const WhyWe = () => {
       <Card className="why-we-card p-2">
        <Card.Body className="text-center">
         <div>
-         <i class="fas fa-6x fa-globe-asia"></i>
+         <i className="fas fa-6x fa-globe-asia"></i>
         </div>
         <h4 className="my-2">10+ year of travel experience</h4>
        </Card.Body>
@@ -48,7 +48,7 @@ const WhyWe = () => {
       <Card className="why-we-card p-2">
        <Card.Body className="text-center">
         <div>
-         <i class="far fa-6x fa-laugh-beam"></i>
+         <i className="far fa-6x fa-laugh-beam"></i>
         </div>
         <h4 className="my-2">90% of our traveller happy</h4>
        </Card.Body>

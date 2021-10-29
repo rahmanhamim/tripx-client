@@ -26,7 +26,9 @@ const Headers = () => {
       <Link to="" className="headers-link">
        Order
       </Link>
-      <Link to="/login">Login</Link>
+      <Link className="login-link" to="/login">
+       <i class="far fa-user icon"></i> Login
+      </Link>
      </Nav>
     </Navbar.Collapse>
    </Container>

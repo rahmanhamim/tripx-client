@@ -24,8 +24,8 @@ const Review = () => {
         Dina James <br /> <small className="card-small-text">Traveller</small>{" "}
        </Card.Title>
        <Card.Text className="review-card-text fw-lighter p-3">
-        <i class="fas fa-3x fa-angle-double-right"></i> <br /> I love the way
-        you guys are always very helpful and accomodating. Your service is
+        <i className="fas fa-3x fa-angle-double-right"></i> <br /> I love the
+        way you guys are always very helpful and accomodating. Your service is
         excellent and I am more than happy to use your organisation for all
         future holidays.
        </Card.Text>
@@ -41,9 +41,9 @@ const Review = () => {
         <br /> <small className="card-small-text">Traveller</small>{" "}
        </Card.Title>
        <Card.Text className="review-card-text fw-lighter p-3">
-        <i class="fas fa-3x fa-angle-double-right"></i> <br /> Yes, we would use
-        you again and recommend you to others. Little fuss and reassured us with
-        our booking in these challenging times.
+        <i className="fas fa-3x fa-angle-double-right"></i> <br /> Yes, we would
+        use you again and recommend you to others. Little fuss and reassured us
+        with our booking in these challenging times.
        </Card.Text>
       </Card.Body>
      </Card>
@@ -57,7 +57,7 @@ const Review = () => {
         <br /> <small className="card-small-text">Traveller</small>{" "}
        </Card.Title>
        <Card.Text className="review-card-text fw-lighter p-3">
-        <i class="fas fa-3x fa-angle-double-right"></i> <br />
+        <i className="fas fa-3x fa-angle-double-right"></i> <br />
         Easy to book, second time we have used and will continue to book through
         travel online. No hassle, everything was sorted for arrival
        </Card.Text>
