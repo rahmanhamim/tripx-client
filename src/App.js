@@ -6,7 +6,6 @@ import Home from "./components/Home/Home/Home";
 import Footer from "./components/Shared/Footer/Footer";
 import Login from "./components/Login/Login";
 import Booking from "./components/Booking/Booking";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
  return (
@@ -19,9 +18,9 @@ function App() {
     <Route exact path="/login">
      <Login></Login>
     </Route>
-    <PrivateRoute exact path="/booking/:bookingId">
+    <Route exact path="/booking/:bookingId">
      <Booking></Booking>
-    </PrivateRoute>
+    </Route>
    </Switch>
    <Footer></Footer>
   </Router>
