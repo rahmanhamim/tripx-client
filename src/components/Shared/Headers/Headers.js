@@ -3,10 +3,10 @@ import "./Headers.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/tripx-logo.png";
 import { Link } from "react-router-dom";
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/useAuth";
 
 const Headers = () => {
- const { user, logOut } = useFirebase();
+ const { user, logOut } = useAuth();
  // console.log(logOut);
 
  return (

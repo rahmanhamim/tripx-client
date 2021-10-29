@@ -6,24 +6,28 @@ import Home from "./components/Home/Home/Home";
 import Footer from "./components/Shared/Footer/Footer";
 import Login from "./components/Login/Login";
 import Booking from "./components/Booking/Booking";
+import AuthProvider from "./context/AuthProvider";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
  return (
-  <Router>
-   <Headers></Headers>
-   <Switch>
-    <Route exact path="/">
-     <Home></Home>
-    </Route>
-    <Route exact path="/login">
-     <Login></Login>
-    </Route>
-    <Route exact path="/booking/:bookingId">
-     <Booking></Booking>
-    </Route>
-   </Switch>
-   <Footer></Footer>
-  </Router>
+  <AuthProvider>
+   <Router>
+    <Headers></Headers>
+    <Switch>
+     <Route exact path="/">
+      <Home></Home>
+     </Route>
+     <Route exact path="/login">
+      <Login></Login>
+     </Route>
+     <PrivateRoute exact path="/booking/:bookingId">
+      <Booking></Booking>
+     </PrivateRoute>
+    </Switch>
+    <Footer></Footer>
+   </Router>
+  </AuthProvider>
  );
 }
 
