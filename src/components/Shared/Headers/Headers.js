@@ -19,7 +19,7 @@ const Headers = () => {
    .then((data) => setCartItems(data));
  }, [user]);
 
- console.log(cartItems);
+ // console.log(cartItems);
 
  return (
   <Navbar bg="light" expand="lg">

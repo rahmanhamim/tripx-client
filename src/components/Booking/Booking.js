@@ -15,6 +15,7 @@ const Booking = () => {
   const userEmail = user.email;
   data.email = userEmail;
   data.bookingId = bookingId;
+  data.service = service;
   // console.log(data);
   fetch("http://localhost:5000/bookings", {
    method: "POST",
