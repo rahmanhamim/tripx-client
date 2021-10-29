@@ -3,8 +3,12 @@ import "./Headers.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/tripx-logo.png";
 import { Link } from "react-router-dom";
+import useFirebase from "../../../hooks/useFirebase";
 
 const Headers = () => {
+ const { user, logOut } = useFirebase();
+ // console.log(logOut);
+
  return (
   <Navbar bg="light" expand="lg">
    <Container>
@@ -23,12 +27,18 @@ const Headers = () => {
       <Link to="/" className="headers-link">
        Home
       </Link>
-      <Link to="" className="headers-link">
-       Order
+      <Link to="/booking" className="headers-link">
+       Booking
       </Link>
-      <Link className="login-link" to="/login">
-       <i class="far fa-user icon"></i> Login
-      </Link>
+      {!user.email ? (
+       <Link className="login-link" to="/login">
+        <i className="far fa-user icon"></i> Login
+       </Link>
+      ) : (
+       <Link onClick={logOut} className="login-link" to="/">
+        <i className="far fa-user icon"></i> Logout
+       </Link>
+      )}
      </Nav>
     </Navbar.Collapse>
    </Container>
