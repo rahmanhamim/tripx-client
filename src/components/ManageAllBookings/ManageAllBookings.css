@@ -22,3 +22,7 @@
 .booking-active-btn:hover {
  background-color: #2fa779;
 }
+.all-order-content {
+ border-bottom: 2px solid #3d3633;
+ margin-bottom: 4em;
+}

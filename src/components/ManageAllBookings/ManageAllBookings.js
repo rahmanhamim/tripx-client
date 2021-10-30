@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
 import "./ManageAllBookings.css";
 
 const ManageAllBookings = () => {
@@ -12,19 +11,29 @@ const ManageAllBookings = () => {
  }, []);
 
  const handleDelete = (id) => {
-  const url = `http://localhost:5000/bookings/${id}`;
-  fetch(url, {
-   method: "DELETE",
-  })
-   .then((res) => res.json())
-   .then((data) => {
-    console.log(data);
-    if (data.deletedCount) {
-     alert("deleted");
-    }
-    const remaining = bookings.filter((items) => items._id !== id);
-    setBookings(remaining);
-   });
+  const query = window.confirm("are you sure?");
+  if (!query) {
+   return;
+  } else {
+   const url = `http://localhost:5000/bookings/${id}`;
+   fetch(url, {
+    method: "DELETE",
+   })
+    .then((res) => res.json())
+    .then((data) => {
+     console.log(data);
+     if (data.deletedCount) {
+      alert("deleted");
+     }
+     const remaining = bookings.filter((items) => items._id !== id);
+     setBookings(remaining);
+    });
+  }
+ };
+
+ const handleStatus = (index) => {
+  const service = bookings[index]._id;
+  console.log(service);
  };
 
  return (
@@ -34,40 +43,46 @@ const ManageAllBookings = () => {
     <p className=" text-center section-subtitle">manage all bookings</p>
    </div>
 
-   <Table bordered hover>
-    <thead>
-     <tr>
-      <th>#</th>
-      <th>Client</th>
-      <th>Booking name</th>
-      <th>Price</th>
-      <th>Status/Action</th>
-     </tr>
-    </thead>
-    <tbody>
-     {bookings?.map((booking, index) => (
-      <tr key={index + 1}>
-       <td>{index + 1}</td>
-       <td>
-        {" "}
-        <strong>Name: </strong>
-        {booking?.name} <strong> Phone:</strong> {booking?.phone}
-       </td>
-       <td>{booking?.service?.name}</td>
-       <td>${booking?.service?.price}</td>
-       <td>
-        {booking?.status} <button className="booking-active-btn">Active</button>
-        <button
-         className="booking-delete-btn"
-         onClick={() => handleDelete(booking._id)}
-        >
-         Delete
-        </button>
-       </td>
-      </tr>
-     ))}
-    </tbody>
-   </Table>
+   <div className="container">
+    <div class="row">
+     <div class="col-1 border">#</div>
+     <div class="col-4 border">
+      <strong>Client </strong>
+     </div>
+     <div class="col-5 border">
+      <strong>Package</strong>
+     </div>
+     <div class="col-2 border">
+      <strong>Status</strong>
+     </div>
+    </div>
+
+    {bookings?.map((booking, index) => (
+     <div key={index + 1} class="row all-order-content">
+      <div class="col-1 border py-2">{index + 1}</div>
+      <div class="col-4 border py-2">
+       {booking.name} <i className="fas fa-phone"></i> {booking.phone}
+      </div>
+      <div class="col-5 border py-2">{booking.service.name}</div>
+      <div class="col-2 border py-2">{booking?.status}</div>
+      <div class="col-12 text-center py-2">
+       <button
+        onClick={() => handleStatus(index)}
+        className="booking-active-btn mb-1"
+       >
+        Active
+       </button>
+       <button
+        className="booking-delete-btn "
+        onClick={() => handleDelete(booking._id)}
+       >
+        delete
+       </button>{" "}
+       <i className="fas fa-arrow-up"></i>
+      </div>
+     </div>
+    ))}
+   </div>
   </div>
  );
 };

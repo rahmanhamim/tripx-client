@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Table } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
 import "./ManageOrder.css";
 
@@ -45,35 +44,41 @@ const ManageOrder = () => {
     <h3 className="text-center section-title">My Bookings</h3>
     <p className=" text-center section-subtitle">manage bookings</p>
    </div>
-   <Table bordered hover>
-    <thead>
-     <tr>
-      <th>#</th>
-      <th>Booking name</th>
-      <th>Price</th>
-      <th>Status</th>
-      <th>Action</th>
-     </tr>
-    </thead>
-    <tbody>
-     {cartItems?.map((items, index) => (
-      <tr key={index + 1}>
-       <td>{index + 1}</td>
-       <td>{items.service.name}</td>
-       <td>${items.service.price}</td>
-       <td>{items?.status}</td>
-       <td>
-        <button
-         className="booking-delete-btn"
-         onClick={() => handleDelete(items._id)}
-        >
-         delete
-        </button>
-       </td>
-      </tr>
-     ))}
-    </tbody>
-   </Table>
+
+   <div className="container">
+    <div class="row">
+     <div class="col-1 border">#</div>
+     <div class="col-3 border">
+      <strong>Package Name </strong>
+     </div>
+     <div class="col-2 border">
+      <strong>Price</strong>
+     </div>
+     <div class="col-3 border">
+      <strong>Status</strong>
+     </div>
+     <div class="col-3 border">
+      <strong>Action</strong>
+     </div>
+    </div>
+
+    {cartItems?.map((items, index) => (
+     <div key={index + 1} class="row">
+      <div class="col-1 border py-2">{index + 1}</div>
+      <div class="col-3 border py-2">{items.service.name}</div>
+      <div class="col-2 border py-2">{items.service.price}</div>
+      <div class="col-3 border py-2">{items?.status}</div>
+      <div class="col-3 border py-2">
+       <button
+        className="booking-delete-btn"
+        onClick={() => handleDelete(items._id)}
+       >
+        delete
+       </button>
+      </div>
+     </div>
+    ))}
+   </div>
   </div>
  );
 };

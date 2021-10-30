@@ -54,13 +54,14 @@ const Headers = () => {
        <>
         <img
          style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-         className="mx-3"
+         className="ms-3 me-2"
          src={user.photoURL}
          alt=""
-        />
+        />{" "}
+        <small>{user.displayName}</small>
         <Link to="/manageorder">
          <button type="button" className="cart-btn position-relative">
-          Cart <i className="fas fa-cart-plus"></i>
+          My Cart <i className="fas fa-cart-plus"></i>
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
            {cartItems.length}
           </span>

@@ -11,7 +11,10 @@ const Banner = () => {
        Amazing Tour <br /> on Earth
       </p>
       <p className="banner-subtitle">Exlpore like never before!</p>
-      <button className="btn-regular">Book Now</button>
+      <a href="#booking-section">
+       {" "}
+       <button className="btn-regular">Book Now</button>{" "}
+      </a>
      </div>
      <div className="col-12 col-md-8"></div>
     </div>

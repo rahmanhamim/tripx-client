@@ -14,7 +14,7 @@ const Services = () => {
  }, []);
 
  return (
-  <section className="services-container container my-5">
+  <section id="booking-section" className="services-container container my-5">
    <div className="services-title text-center mb-5">
     <p className="section-subtitle mb-1">Choose your package</p>
     <h2 className="section-title">
