@@ -1,6 +1,6 @@
 # This is a tourism website worldwide
 
-This project created with react, firebase, mongodb, bootstrap etc [TripX](https://tripx.bd-web.app).
+This project created with react, firebase, mongodb, bootstrap etc [TripX](https://tripx-bd-web.app).
 
 ## What you can do
 
