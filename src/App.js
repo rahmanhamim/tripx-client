@@ -9,6 +9,7 @@ import Booking from "./components/Booking/Booking";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ManageOrder from "./components/ManageOrder/ManageOrder";
+import ManageAllBookings from "./components/ManageAllBookings/ManageAllBookings";
 
 function App() {
  return (
@@ -27,6 +28,9 @@ function App() {
      </PrivateRoute>
      <PrivateRoute exact path="/manageorder">
       <ManageOrder></ManageOrder>
+     </PrivateRoute>
+     <PrivateRoute exact path="/allbookings">
+      <ManageAllBookings></ManageAllBookings>
      </PrivateRoute>
     </Switch>
     <Footer></Footer>

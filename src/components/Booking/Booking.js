@@ -16,6 +16,7 @@ const Booking = () => {
   data.email = userEmail;
   data.bookingId = bookingId;
   data.service = service;
+  data.status = "pending";
   // console.log(data);
   fetch("http://localhost:5000/bookings", {
    method: "POST",

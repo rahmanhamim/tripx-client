@@ -1,3 +1,9 @@
 .manage-order {
  min-height: 50vh;
 }
+.order-user-delete {
+ color: red;
+ width: fit-content;
+ cursor: pointer;
+ font-weight: 700;
+}

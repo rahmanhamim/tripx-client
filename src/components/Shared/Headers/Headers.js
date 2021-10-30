@@ -39,8 +39,8 @@ const Headers = () => {
       <Link to="/" className="headers-link">
        Home
       </Link>
-      <Link to="/booking" className="headers-link">
-       Booking
+      <Link to="/allbookings" className="headers-link">
+       Manage All Bookings
       </Link>
 
       {!user.email ? (
