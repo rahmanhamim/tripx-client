@@ -38,25 +38,25 @@ const ManageAllBookings = () => {
     <thead>
      <tr>
       <th>#</th>
-      <th>Client email</th>
-      <th>Phone</th>
+      <th>Client</th>
       <th>Booking name</th>
       <th>Price</th>
-      <th>Status</th>
-      <th>Action</th>
+      <th>Status/Action</th>
      </tr>
     </thead>
     <tbody>
      {bookings?.map((booking, index) => (
       <tr key={index + 1}>
        <td>{index + 1}</td>
-       <td>{booking?.email}</td>
-       <td>{booking?.phone}</td>
+       <td>
+        {" "}
+        <strong>Name: </strong>
+        {booking?.name} <strong> Phone:</strong> {booking?.phone}
+       </td>
        <td>{booking?.service?.name}</td>
        <td>${booking?.service?.price}</td>
-       <td>{booking?.status} </td>
        <td>
-        <button className="booking-active-btn">Active</button>
+        {booking?.status} <button className="booking-active-btn">Active</button>
         <button
          className="booking-delete-btn"
          onClick={() => handleDelete(booking._id)}

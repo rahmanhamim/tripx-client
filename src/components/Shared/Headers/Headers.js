@@ -42,6 +42,9 @@ const Headers = () => {
       <Link to="/allbookings" className="headers-link">
        Manage All Bookings
       </Link>
+      <Link to="/addservice" className="headers-link">
+       Add Service
+      </Link>
 
       {!user.email ? (
        <Link className="login-link" to="/login">

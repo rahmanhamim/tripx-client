@@ -1,0 +1,13 @@
+.add-service {
+ min-height: 50vh;
+}
+.add-service-form {
+ display: flex;
+ flex-direction: column;
+}
+.add-service-form input {
+ margin: 0.5em;
+ padding: 0.5em 0.3em;
+ border-radius: 5px;
+ border: 1px solid rgba(0, 0, 0, 0.281);
+}

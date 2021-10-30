@@ -10,6 +10,8 @@ import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ManageOrder from "./components/ManageOrder/ManageOrder";
 import ManageAllBookings from "./components/ManageAllBookings/ManageAllBookings";
+import AddService from "./components/AddService/AddService";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function App() {
  return (
@@ -32,6 +34,12 @@ function App() {
      <PrivateRoute exact path="/allbookings">
       <ManageAllBookings></ManageAllBookings>
      </PrivateRoute>
+     <PrivateRoute exact path="/addservice">
+      <AddService></AddService>
+     </PrivateRoute>
+     <Route path="*">
+      <PageNotFound></PageNotFound>
+     </Route>
     </Switch>
     <Footer></Footer>
    </Router>
