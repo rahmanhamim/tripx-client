@@ -32,8 +32,19 @@ const ManageAllBookings = () => {
  };
 
  const handleStatus = (index) => {
-  const service = bookings[index]._id;
-  console.log(service);
+  const bookingId = bookings[index]._id;
+  const status = { status: "activated" };
+
+  console.log(bookingId);
+  fetch(`http://localhost:5000/bookings/${bookingId}`, {
+   method: "PUT",
+   headers: { "content-type": "application/json" },
+   body: JSON.stringify(status),
+  })
+   .then((res) => res.json())
+   .then((result) => {
+    console.log(result);
+   });
  };
 
  return (
@@ -44,29 +55,30 @@ const ManageAllBookings = () => {
    </div>
 
    <div className="container">
-    <div class="row">
-     <div class="col-1 border">#</div>
-     <div class="col-4 border">
+    <div className="row">
+     <div className="col-1 border">#</div>
+     <div className="col-4 border">
       <strong>Client </strong>
      </div>
-     <div class="col-5 border">
+     <div className="col-5 border">
       <strong>Package</strong>
      </div>
-     <div class="col-2 border">
+     <div className="col-2 border">
       <strong>Status</strong>
      </div>
     </div>
 
     {bookings?.map((booking, index) => (
-     <div key={index + 1} class="row all-order-content">
-      <div class="col-1 border py-2">{index + 1}</div>
-      <div class="col-4 border py-2">
+     <div key={index + 1} className="row all-order-content">
+      <div className="col-1 border py-2">{index + 1}</div>
+      <div className="col-4 border py-2">
        {booking.name} <i className="fas fa-phone"></i> {booking.phone}
       </div>
-      <div class="col-5 border py-2">{booking.service.name}</div>
-      <div class="col-2 border py-2">{booking?.status}</div>
-      <div class="col-12 text-center py-2">
+      <div className="col-5 border py-2">{booking.service.name}</div>
+      <div className="col-2 border py-2">{booking?.status}</div>
+      <div className="col-12 text-center py-2">
        <button
+        id="active"
         onClick={() => handleStatus(index)}
         className="booking-active-btn mb-1"
        >

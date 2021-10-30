@@ -46,29 +46,29 @@ const ManageOrder = () => {
    </div>
 
    <div className="container">
-    <div class="row">
-     <div class="col-1 border">#</div>
-     <div class="col-3 border">
+    <div className="row">
+     <div className="col-1 border">#</div>
+     <div className="col-3 border">
       <strong>Package Name </strong>
      </div>
-     <div class="col-2 border">
+     <div className="col-2 border">
       <strong>Price</strong>
      </div>
-     <div class="col-3 border">
+     <div className="col-3 border">
       <strong>Status</strong>
      </div>
-     <div class="col-3 border">
+     <div className="col-3 border">
       <strong>Action</strong>
      </div>
     </div>
 
     {cartItems?.map((items, index) => (
-     <div key={index + 1} class="row">
-      <div class="col-1 border py-2">{index + 1}</div>
-      <div class="col-3 border py-2">{items.service.name}</div>
-      <div class="col-2 border py-2">{items.service.price}</div>
-      <div class="col-3 border py-2">{items?.status}</div>
-      <div class="col-3 border py-2">
+     <div key={index + 1} className="row">
+      <div className="col-1 border py-2">{index + 1}</div>
+      <div className="col-3 border py-2">{items.service.name}</div>
+      <div className="col-2 border py-2">{items.service.price}</div>
+      <div className="col-3 border py-2">{items?.status}</div>
+      <div className="col-3 border py-2">
        <button
         className="booking-delete-btn"
         onClick={() => handleDelete(items._id)}

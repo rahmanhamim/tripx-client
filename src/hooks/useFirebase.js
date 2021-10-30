@@ -28,7 +28,9 @@ const useFirebase = () => {
    .catch((error) => {
     setError(error.message);
    })
-   .finally(() => setIsLoading(false));
+   .finally(() => {
+    setIsLoading(false);
+   });
  };
  // logout
  const logOut = () => {

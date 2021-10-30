@@ -62,9 +62,6 @@ const Headers = () => {
         <Link to="/manageorder">
          <button type="button" className="cart-btn position-relative">
           My Cart <i className="fas fa-cart-plus"></i>
-          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-           {cartItems.length}
-          </span>
          </button>
         </Link>
         <Link onClick={logOut} className="login-link" to="/">
