@@ -18,7 +18,7 @@ const Booking = () => {
   data.service = service;
   data.status = "pending";
   // console.log(data);
-  fetch("http://localhost:5000/bookings", {
+  fetch("https://stark-tor-04030.herokuapp.com/bookings", {
    method: "POST",
    headers: {
     "content-type": "application/json",
@@ -36,7 +36,7 @@ const Booking = () => {
 
  const [service, setService] = useState({});
  useEffect(() => {
-  fetch(`http://localhost:5000/services/${bookingId}`)
+  fetch(`https://stark-tor-04030.herokuapp.com/services/${bookingId}`)
    .then((res) => res.json())
    .then((data) => setService(data));
  }, []);

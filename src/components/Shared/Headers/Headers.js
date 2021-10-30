@@ -14,7 +14,7 @@ const Headers = () => {
 
  const [cartItems, setCartItems] = useState([]);
  useEffect(() => {
-  fetch(`http://localhost:5000/bookings/${user.email}`)
+  fetch(`https://stark-tor-04030.herokuapp.com/bookings/${user.email}`)
    .then((res) => res.json())
    .then((data) => setCartItems(data));
  }, [user]);

@@ -5,7 +5,7 @@ const ManageAllBookings = () => {
  const [bookings, setBookings] = useState([]);
 
  useEffect(() => {
-  fetch("http://localhost:5000/bookings")
+  fetch("https://stark-tor-04030.herokuapp.com/bookings")
    .then((res) => res.json())
    .then((data) => setBookings(data));
  }, []);
@@ -15,7 +15,7 @@ const ManageAllBookings = () => {
   if (!query) {
    return;
   } else {
-   const url = `http://localhost:5000/bookings/${id}`;
+   const url = `https://stark-tor-04030.herokuapp.com/bookings/${id}`;
    fetch(url, {
     method: "DELETE",
    })
@@ -36,7 +36,7 @@ const ManageAllBookings = () => {
   const status = { status: "activated" };
 
   console.log(bookingId);
-  fetch(`http://localhost:5000/bookings/${bookingId}`, {
+  fetch(`https://stark-tor-04030.herokuapp.com/bookings/${bookingId}`, {
    method: "PUT",
    headers: { "content-type": "application/json" },
    body: JSON.stringify(status),

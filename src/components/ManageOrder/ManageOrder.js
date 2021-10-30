@@ -10,7 +10,7 @@ const ManageOrder = () => {
 
  const [cartItems, setCartItems] = useState([]);
  useEffect(() => {
-  fetch(`http://localhost:5000/bookings/${user.email}`)
+  fetch(`https://stark-tor-04030.herokuapp.com/bookings/${user.email}`)
    .then((res) => res.json())
    .then((data) => setCartItems(data));
  }, [user]);
@@ -22,7 +22,7 @@ const ManageOrder = () => {
   if (!query) {
    return;
   } else {
-   const url = `http://localhost:5000/bookings/${id}`;
+   const url = `https://stark-tor-04030.herokuapp.com/bookings/${id}`;
    fetch(url, {
     method: "DELETE",
    })
