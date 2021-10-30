@@ -19,19 +19,24 @@ const ManageOrder = () => {
  console.log(cartItems);
 
  const handleDelete = (id) => {
-  const url = `http://localhost:5000/bookings/${id}`;
-  fetch(url, {
-   method: "DELETE",
-  })
-   .then((res) => res.json())
-   .then((data) => {
-    console.log(data);
-    if (data.deletedCount) {
-     alert("deleted");
-    }
-    const remaining = cartItems.filter((items) => items._id !== id);
-    setCartItems(remaining);
-   });
+  const query = window.confirm("are you sure?");
+  if (!query) {
+   return;
+  } else {
+   const url = `http://localhost:5000/bookings/${id}`;
+   fetch(url, {
+    method: "DELETE",
+   })
+    .then((res) => res.json())
+    .then((data) => {
+     console.log(data);
+     if (data.deletedCount) {
+      alert("deleted");
+     }
+     const remaining = cartItems.filter((items) => items._id !== id);
+     setCartItems(remaining);
+    });
+  }
  };
 
  return (

@@ -48,13 +48,7 @@ const Booking = () => {
     <div className="col-12 col-md-8">
      <img src={service?.img} className="img-fluid" alt="" />
      <h1 className="my-4">{service?.name}</h1>
-     <p>
-      The Paris Hill Historic District encompasses the historic 19th century
-      village of Paris Hill in Paris, Maine. This village was the primary civic
-      seat in the town, which is also the county seat of Oxford County, and was
-      where county facilities were located until they were moved to South Paris
-      in 1895.
-     </p>
+     <p>{service.description}</p>
      <hr />
      <div className="d-flex justify-content-between">
       <p>
@@ -78,9 +72,14 @@ const Booking = () => {
     </div>
     <div className="col-12 col-md-4">
      <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name")} placeholder="You name" />
-      <input type="number" {...register("phone")} placeholder="Phone" />
-      <input type="number" {...register("age")} placeholder="Age" />
+      <input {...register("name")} placeholder="You name" required />
+      <input
+       type="number"
+       {...register("phone")}
+       placeholder="Phone"
+       required
+      />
+      <input type="number" {...register("age")} placeholder="Age" required />
       <select {...register("gender")}>
        <option value="male">male</option>
        <option value="female">female</option>

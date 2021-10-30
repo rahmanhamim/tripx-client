@@ -30,14 +30,21 @@ const AddService = () => {
     style={{ maxWidth: "30rem" }}
     onSubmit={handleSubmit(onSubmit)}
    >
-    <input {...register("name")} placeholder="Service Name" />
-    <input type="url" {...register("img")} placeholder="Image URL" />
-    <input type="number" {...register("price")} placeholder="Price" />
-    <input type="number" {...register("rating")} placeholder="Rating" />
+    <input {...register("name")} placeholder="Service Name" required />
+    <input type="url" {...register("img")} placeholder="Image URL" required />
+    <input type="number" {...register("price")} placeholder="Price" required />
+    <input
+     type="number"
+     {...register("rating")}
+     placeholder="Rating"
+     required
+    />
+    <input {...register("description")} placeholder="Description" required />
     <input
      type="number"
      {...register("tourDays")}
      placeholder="Tour Day Duration"
+     required
     />
 
     <input className="book-btn" type="submit" value="Add Service" />

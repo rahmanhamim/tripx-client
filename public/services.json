@@ -1,50 +1,50 @@
 [
  {
-  "id": 1,
   "name": "Paris Hill Tour",
   "img": "https://i.ibb.co/x76qZb4/tourPkg1.png",
   "price": "180",
   "rating": "3",
-  "tourDays": "3"
+  "tourDays": "3",
+  "description": "The Paris Hill Historic District encompasses the historic 19th century village of Paris Hill in Paris, Maine. This village was the primary civic seat in the town, which is also the county seat of Oxford County, and was where county facilities were located until they were moved to South Paris in 1895."
  },
  {
-  "id": 2,
   "name": "Lake Grada, Italy",
   "img": "https://i.ibb.co/594pnYk/tourPkg2.png",
   "price": "280",
   "rating": "8",
-  "tourDays": "5"
+  "tourDays": "5",
+  "description": "Lake Garda, in northern Italy, is known for its crystal clear water. At the south end, the town of Sirmione is dominated by the Rocca Scaligera, a fortress with harbor views. The nearby Grotte di Catullo archaeological site includes a Roman villa. On the lake's western shore, in Gardone Riviera, is Il Vittoriale degli Italiani, former home of poet d’Annunzio. The Dolomites frame Riva del Garda, a resort in the north."
  },
  {
-  "id": 3,
-  "name": "Mount Dtna, Italy",
+  "name": "Mount Etna, Italy",
   "img": "https://i.ibb.co/Pg9RdW8/tourPkg3.png",
   "price": "120",
   "rating": "3",
-  "tourDays": "6"
+  "tourDays": "6",
+  "description": "Mount Etna, or Etna, is an active stratovolcano on the east coast of Sicily, Italy, in the Metropolitan City of Catania, between the cities of Messina and Catania. It lies above the convergent plate margin between the African Plate and the Eurasian Plate."
  },
  {
-  "id": 4,
-  "name": "Amlafi Costa, Italy",
+  "name": "Amalfi Coast, Italy",
   "img": "https://i.ibb.co/wBcGtwX/tourPkg4.png",
   "price": "300",
   "rating": "7",
-  "tourDays": "5"
+  "tourDays": "5",
+  "description": "The Amalfi Coast is a 50-kilometer stretch of coastline along the southern edge of Italy’s Sorrentine Peninsula, in the Campania region. It’s a popular holiday destination, with sheer cliffs and a rugged shoreline dotted with small beaches and pastel-colored fishing villages. The coastal road between the port city of Salerno and clifftop Sorrento winds past grand villas, terraced vineyards and cliffside lemon groves"
  },
  {
-  "id": 5,
-  "name": "French Rivira, France",
+  "name": "French Riviera, France",
   "img": "https://i.ibb.co/xJdFcxq/tourPkg5.png",
   "price": "240",
   "rating": "11",
-  "tourDays": "7"
+  "tourDays": "7",
+  "description": "The French Riviera (or Côte d'Azur) is the Mediterranean coast of southeastern France. It includes famously glamorous beach resorts such as Saint-Tropez and Cannes, and the independent microstate of Monaco. A health retreat in the 18th century, the area later attracted aristocrats, artists and the 1960s, Today it’s an established holiday destination, with paths connecting many coastal villages and towns."
  },
  {
-  "id": 6,
   "name": "Lake Geneva, France",
   "img": "https://i.ibb.co/Ry6pSzT/tourPkg6.png",
   "price": "160",
   "rating": "3",
-  "tourDays": "4"
+  "tourDays": "4",
+  "description": "Lake Geneva is a resort city on Geneva Lake in southeastern Wisconsin. The lakeside Shore Path is dotted with Gilded Age mansions, many built by wealthy Chicagoans. Nearby, the 19th-century Black Point Estate and Gardens was the summer home of Chicago beer magnate Conrad Seipp. The Queen Anne–style house has Victorian furnishings. Local beaches include Big Foot Beach State Park, which has trails and picnic areas."
  }
 ]
