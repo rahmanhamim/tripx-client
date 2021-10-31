@@ -76,7 +76,13 @@ const ManageAllBookings = () => {
      <div key={index + 1} className="row all-order-content">
       <div className="col-1 border py-2">{index + 1}</div>
       <div className="col-4 border py-2">
-       {booking.name} <i className="fas fa-phone"></i> {booking.phone}
+       <p> {booking.name}</p>
+       <p className="mt-2">
+        <i className="fas fa-phone"></i> {booking.phone}
+       </p>
+       <p className="mt-2" style={{ overflowWrap: "break-word" }}>
+        {booking.email}
+       </p>
       </div>
       <div className="col-4 border py-2">{booking.service.name}</div>
       <div className="col-3 border py-2">{booking?.status}</div>
