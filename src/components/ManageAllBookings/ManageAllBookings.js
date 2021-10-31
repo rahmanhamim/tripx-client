@@ -3,12 +3,14 @@ import "./ManageAllBookings.css";
 
 const ManageAllBookings = () => {
  const [bookings, setBookings] = useState([]);
+ const [reload, setReload] = useState(true);
+ //  this reaload function used for updating pending status instantly
 
  useEffect(() => {
   fetch("https://stark-tor-04030.herokuapp.com/bookings")
    .then((res) => res.json())
    .then((data) => setBookings(data));
- }, []);
+ }, [reload]);
 
  const handleDelete = (id) => {
   const query = window.confirm("are you sure?");
@@ -44,6 +46,8 @@ const ManageAllBookings = () => {
    .then((res) => res.json())
    .then((result) => {
     console.log(result);
+    reload ? setReload(false) : setReload(true);
+    alert("Booking activated");
    });
  };
 

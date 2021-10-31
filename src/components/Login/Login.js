@@ -10,7 +10,7 @@ const Login = () => {
  const history = useHistory();
  const location = useLocation();
  const url = location.state?.from || "/";
- console.log(url);
+ //  console.log(url);
 
  const handleGoogleLogin = () => {
   googleSignIn()

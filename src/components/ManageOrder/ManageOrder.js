@@ -15,7 +15,7 @@ const ManageOrder = () => {
    .then((data) => setCartItems(data));
  }, [user]);
 
- console.log(cartItems);
+ //  console.log(cartItems);
 
  const handleDelete = (id) => {
   const query = window.confirm("are you sure?");
