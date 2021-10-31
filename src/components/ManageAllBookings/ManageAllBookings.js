@@ -33,7 +33,7 @@ const ManageAllBookings = () => {
 
  const handleStatus = (index) => {
   const bookingId = bookings[index]._id;
-  const status = { status: "activated" };
+  const status = { status: "active" };
 
   console.log(bookingId);
   fetch(`https://stark-tor-04030.herokuapp.com/bookings/${bookingId}`, {
@@ -60,10 +60,10 @@ const ManageAllBookings = () => {
      <div className="col-4 border">
       <strong>Client </strong>
      </div>
-     <div className="col-5 border">
+     <div className="col-4 border">
       <strong>Package</strong>
      </div>
-     <div className="col-2 border">
+     <div className="col-3 border">
       <strong>Status</strong>
      </div>
     </div>
@@ -74,8 +74,8 @@ const ManageAllBookings = () => {
       <div className="col-4 border py-2">
        {booking.name} <i className="fas fa-phone"></i> {booking.phone}
       </div>
-      <div className="col-5 border py-2">{booking.service.name}</div>
-      <div className="col-2 border py-2">{booking?.status}</div>
+      <div className="col-4 border py-2">{booking.service.name}</div>
+      <div className="col-3 border py-2">{booking?.status}</div>
       <div className="col-12 text-center py-2">
        <button
         id="active"

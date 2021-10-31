@@ -19,19 +19,9 @@ const useFirebase = () => {
 
  // google sign in
  const googleSignIn = () => {
-  setIsLoading(true);
-  signInWithPopup(auth, googleProvider)
-   .then((result) => {
-    setError("");
-    return setUser(result.user);
-   })
-   .catch((error) => {
-    setError(error.message);
-   })
-   .finally(() => {
-    setIsLoading(false);
-   });
+  return signInWithPopup(auth, googleProvider);
  };
+
  // logout
  const logOut = () => {
   setIsLoading(true);
@@ -59,10 +49,13 @@ const useFirebase = () => {
 
  return {
   user,
+  setUser,
   googleSignIn,
   logOut,
   isLoading,
+  setIsLoading,
   error,
+  setError,
  };
 };
 
