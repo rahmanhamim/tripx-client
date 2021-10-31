@@ -4,14 +4,24 @@ import { useState } from "react";
 import { Row } from "react-bootstrap";
 import Service from "../Service/Service";
 import "./Services.css";
+import loadingGif from "../../../images/loading2.gif";
 
 const Services = () => {
  const [services, setServices] = useState([]);
+
  useEffect(() => {
   fetch("https://stark-tor-04030.herokuapp.com/services")
    .then((res) => res.json())
    .then((data) => setServices(data));
  }, []);
+
+ if (services.length === 0) {
+  return (
+   <div className="container mx-auto text-center">
+    <img src={loadingGif} className="img-fluid" alt="" />
+   </div>
+  );
+ }
 
  return (
   <section id="booking-section" className="services-container container my-5">

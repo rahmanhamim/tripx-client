@@ -5,6 +5,7 @@ import "./Service.css";
 
 const Service = ({ service }) => {
  const { name, img, price, rating, tourDays, _id } = service;
+
  return (
   <Col>
    <Card className="service-card h-100">
